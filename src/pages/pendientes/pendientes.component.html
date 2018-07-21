@@ -1,0 +1,23 @@
+<ion-header>
+    <ion-navbar>
+        <ion-title>Lista de Pendientes</ion-title>
+    </ion-navbar>
+</ion-header>
+
+<!--<ion-content padding>
+
+    <ul>
+        <li *ngFor="let lista of deseosService.listas">
+            {{ lista.titulo }}
+        </li>
+    </ul>
+</ion-content>-->
+
+<ion-content>
+
+    <ion-list>
+        <button ion-item *ngFor="let lista of deseosService.listas" (click)="listaSeleccionada(lista)">
+          {{ lista.titulo }}
+      </button>
+    </ion-list>
+</ion-content>
